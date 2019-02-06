@@ -612,7 +612,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!222 &1172366708
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -904,7 +904,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404826332}
   m_LocalRotation: {x: 0.5224985, y: 0, z: 0, w: 0.8526402}
-  m_LocalPosition: {x: -0.03, y: 7, z: -11.66}
+  m_LocalPosition: {x: -0.03, y: 9, z: -11.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1984571034}
@@ -1018,7 +1018,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!222 &1415550310
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1069,7 +1069,7 @@ MonoBehaviour:
   red: {r: 1, g: 0.5882353, b: 0.5882353, a: 1}
   neutral: {r: 1, g: 1, b: 1, a: 1}
   fadeSpeed: 0.2
-  floating: 0.1
+  floating: 0.4
   screenSpeed: 0.05
   screenReturnSpeed: 0.2
   colorFloating: 0.01
@@ -1302,7 +1302,7 @@ PrefabInstance:
     - target: {fileID: 8663423876531566327, guid: 6322d60ef4bdf4040ba9d10a2f1410c5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 28.71
+      value: 29.71
       objectReference: {fileID: 0}
     - target: {fileID: 8663423876531566327, guid: 6322d60ef4bdf4040ba9d10a2f1410c5,
         type: 3}
