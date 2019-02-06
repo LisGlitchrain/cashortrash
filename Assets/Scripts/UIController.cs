@@ -10,6 +10,9 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject disLikeScreen;
     [SerializeField] GameObject light1;
     [SerializeField] GameObject light2;
+    [SerializeField] GameObject likeBtn;
+    [SerializeField] GameObject dislikeBtn;
+    [SerializeField] GameObject returnBtn;
     [SerializeField] float targetLightIntensity;
     [SerializeField] float lightSpeed;
     [SerializeField] float lightFloating;
@@ -27,7 +30,7 @@ public class UIController : MonoBehaviour
 
     public enum Status
     {
-        like, dislike, neutral, moveToLike, moveToDislike, lightening
+        like, dislike, neutral, moveToLike, moveToDislike, lightening, await
     }
 
     // Start is called before the first frame update
@@ -45,7 +48,9 @@ public class UIController : MonoBehaviour
                 mainScreen.GetComponent<SpriteRenderer>().color = neutral;
                 MoveToOtherScreen(mainScreen, floating, screenReturnSpeed);
                 Lightening(light1, light2, 0f, lightFloating, lightSpeed);
-
+                returnBtn.SetActive(false);
+                likeBtn.SetActive(true);
+                dislikeBtn.SetActive(true);
                 break;
             case Status.like:
                 if (FadeColor(mainScreen, green, fadeSpeed)) statusUI = Status.moveToLike;
@@ -60,7 +65,12 @@ public class UIController : MonoBehaviour
                 if (MoveToOtherScreen(disLikeScreen, floating, screenSpeed)) statusUI = Status.lightening;
                 break;
             case Status.lightening:
-                if (Lightening(light1, light2, targetLightIntensity, lightFloating, lightSpeed)) statusUI = Status.neutral;
+                if (Lightening(light1, light2, targetLightIntensity, lightFloating, lightSpeed)) statusUI = Status.await;
+                break;
+            case Status.await:
+                likeBtn.SetActive(false);
+                dislikeBtn.SetActive(false);
+                returnBtn.SetActive(true);
                 break;
         }
     }

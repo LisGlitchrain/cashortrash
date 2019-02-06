@@ -35,4 +35,12 @@ public class GameManager : MonoBehaviour
             uiController.SetUIStatus(UIController.Status.dislike);
         }
     }
+
+    public void PushReturnBtn()
+    {
+        if(uiController.StatusUI ==  UIController.Status.await)
+        {
+            uiController.SetUIStatus(UIController.Status.neutral);
+        }
+    }
 }
