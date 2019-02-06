@@ -44,7 +44,7 @@ public class UIController : MonoBehaviour
             case Status.neutral:
                 mainScreen.GetComponent<SpriteRenderer>().color = neutral;
                 MoveToOtherScreen(mainScreen, floating, screenReturnSpeed);
-                if (Lightening(light1, light2, 0f, lightFloating, lightSpeed)) statusUI = Status.neutral;
+                Lightening(light1, light2, 0f, lightFloating, lightSpeed);
 
                 break;
             case Status.like:
